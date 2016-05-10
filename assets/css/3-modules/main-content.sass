@@ -1,5 +1,10 @@
+/* MAIN BODY */
 .content-wrapper
   margin-left: 350px
+
+  @media screen and (max-width: 1500px)
+
+    margin: 58px auto 0 auto
 
   .content-container
     width: 100%
@@ -10,9 +15,213 @@
 
     .section-container
       max-width: 1480px
-      padding: 4% 0 4% o
+      padding: 4% 0 4% 0
       margin: 0 auto
 
       @media screen and (max-width: 2000px)
 
         width: 90%
+
+      @media screen and (max-width: 700px)
+
+        width: 95%
+
+
+      /* THUMBNAIL GRID */
+      .thumbs
+        position: relative
+        opacity: 1
+        transition: all 0.7s ease-in-out
+        visibility: visible
+        transform: translateY(0px)
+
+        &.thumbclose
+          height: 0
+          overflow: hidden
+          visibility: hidden
+          opacity: 0
+          transform: translateY(60px)
+
+        .row
+          width: 100%
+          margin: 0 auto 5.5% auto
+          +clearfix
+
+          &:nth-last-child(2)
+            margin-bottom: 2.75%
+
+          @media screen and (max-width: 700px)
+
+            margin: 0 auto
+
+          article
+            box-sizing: border-box
+            width: 47.25%
+            padding-bottom: 47.25%
+            background: none
+              size: cover, cover
+              position: center
+            float: left
+            position: relative
+            cursor: pointer
+            opacity: 0
+            transform: translateY(60px)
+            transition: all 0.6s ease-in-out
+            mix-blend-mode: multiply
+
+            &.is-open
+              opacity: 1
+              transform: translateY(0px)
+
+            &:nth-child(1)
+              margin-right: 2.75%
+
+            &:nth-child(2)
+              margin-left: 2.75%
+
+            @media screen and (max-width: 700px)
+
+              width: 100%
+              padding-bottom: 100%
+              float: none
+              margin: 0 auto 2.5% auto
+
+              &:nth-child(2)
+                margin-left: 0
+
+            .overlay
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+              background: rgba(0, 0, 0, 0.3)
+              transition: 0.3s ease-in
+              text-align: center
+              display: flex
+              align-items: center
+              justify-content: center
+              opacity: 1
+
+              &:hover,
+              &:focus h1
+                opacity: 0
+
+              h1
+                color: white
+                font-size: 4.8em
+                letter-spacing: 1px
+                font-smoothing: antialiased
+                opacity: 1
+
+                @media screen and (max-width: 1150px)
+                  font-size: 3em
+
+
+        .footer
+          text-align: right
+          p
+            font-size: 0.8em
+            text-align: right
+            color: $black
+            font-smoothing: antialiased
+
+
+      /* PROJECTS */
+      .work
+        position: relavtive
+        opacity: 0
+        transition: all 0.7s ease-in-out
+        height: 0
+        overflow: hidden
+        visibility: hidden
+        transform: translateY(60px)
+
+        &.workopen
+          height: auto
+          opacity: 1
+          visibility: visible
+          overflow: auto
+          transform: translateY(0px)
+
+        .head
+          +clearfix
+          margin-bottom: 5.5%
+
+          h1
+            font-size: 6em
+            font-family: 'Raleway', sans-serif
+            margin: 0 0 0 1%
+            float: left
+            width: 80%
+            color: $black
+
+            @media screen and (max-width: 1200px)
+            font-size: 5em
+
+            @media screen and (max-width: 950px)
+            font-size: 3.5em
+
+            @media screen and (max-width: 650px)
+            font-size: 2.5em
+
+            @media screen and (max-width: 450px)
+            font-size: 2em
+
+          .exit
+            position: relative
+            width: 32px
+            height: 32px
+            overflow: hidden
+            display: inline-block
+            cursor: pointer
+            float: right
+
+            &:before, &:after
+              content: ''
+              position: absolute
+              width: 100%
+              height: 3px
+              background: $black
+              top: 50%
+              left: 0
+
+            &:before
+              transform: rotate(45deg)
+
+            &:after
+              transform: rotate(-45deg)
+
+        .image
+          width: 100%
+          margin-bottom: 5.5%
+
+          &:nth-last-child(2)
+            margin-bottom: 2.75%
+
+            img
+              width: 100%
+
+        p
+          font-size: 1.8em
+          line-height: 1.8
+          font-family: 'Inconsolata', sans-serif
+          margin-bottom: 5.5%
+          color: $black
+          font-smoothing: antialiased
+
+          @media screen and (max-width: 950px)
+            font-size: 1.5em
+
+          @media screen and (max-width: 450px)
+            font-size: 1em
+
+
+        /* FOOTER */
+        .footer
+          text-align: right
+          p
+            font-size: 0.8em
+            text-align: right
+            color: $black
+            font-smoothing: antialiased
