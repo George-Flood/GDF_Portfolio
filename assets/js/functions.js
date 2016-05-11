@@ -23,12 +23,12 @@ $( document ).ready(function() {
 
   $('article').click(function() {
     $('.work').addClass('workopen');
-    $('.thumbs').addClass('thumbsclose');
+    $('.thumbs').addClass('thumbclose');
   });
 
   $('body').on("click", ".exit", function() {
     $('.work').removeClass('workopen');
-    $('.thumbs').removeClass('thumbsclose');
+    $('.thumbs').removeClass('thumbclose');
   });
 
   $('article').on("click", function() {
@@ -39,27 +39,20 @@ $( document ).ready(function() {
   function workLoad() {
 
     $.ajaxSetup({
-      cache: false
+      cache: true
     });
-
-
 
     $('article').click(function() {
 
       var $this = $(this),
         spinner = '<div class="loader"></div>',
         newFolder = $this.data('folder'),
-        newHTML = '.assets/work/' + newFolder + '.html';
-
-
-      //history.pushState({}, '', newFolder);
+        newHTML = 'assets/work/' + newFolder + '.html';
       $('.work').html(spinner).load(newHTML);
-      //return false;
 
     });
 
   }
-
 
 
 });
