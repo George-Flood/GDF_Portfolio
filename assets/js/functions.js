@@ -47,12 +47,11 @@ $( document ).ready(function() {
       var $this = $(this),
         spinner = '<div class="loader"></div>',
         newFolder = $this.data('folder'),
-        newHTML = 'assets/work/' + newFolder + '.html';
+        newHTML = 'https://dl.dropboxusercontent.com/u/56971683/Portfolio/work/' + newFolder + '.html';
       $('.work').html(spinner).load(newHTML);
 
     });
 
   }
-
 
 });
