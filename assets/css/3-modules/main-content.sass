@@ -4,12 +4,10 @@
 
   @media screen and (max-width: 1500px)
 
-    margin: 58px auto 0 auto
+    margin: 81px auto 0 auto
 
   .content-container
     width: 100%
-    background: white
-    position: relative
     left: 0
     overflow: hidden
 
@@ -18,23 +16,23 @@
       padding: 4% 0 4% 0
       margin: 0 auto
 
+      @media screen and (max-width: 1500px)
+
+        padding-top: 0
+
       @media screen and (max-width: 2000px)
 
         width: 90%
 
-      @media screen and (max-width: 700px)
-
-        width: 95%
-
 
       /* THUMBNAIL GRID */
       .thumbs
-        position: relative
         opacity: 1
         transition: all 0.7s ease-in-out
         visibility: visible
         transform: translateY(0px)
         height: auto
+        overflow: auto
 
         &.thumbclose
           height: 0
@@ -96,7 +94,7 @@
               left: 0
               right: 0
               bottom: 0
-              background: rgba(0, 0, 0, 0.3)
+              background: rgba(0, 0, 0, 0.2)
               transition: 0.3s ease-in
               text-align: center
               display: flex
@@ -108,8 +106,9 @@
               &:focus h1
                 opacity: 0
 
+
               h1
-                color: white
+                color: $white
                 font-size: 4.8em
                 letter-spacing: 1px
                 font-smoothing: antialiased
@@ -121,7 +120,6 @@
 
       /* PROJECTS */
       .work
-        position: relavtive
         opacity: 0
         transition: all 0.7s ease-in-out
         height: 0
@@ -137,15 +135,14 @@
           transform: translateY(0px)
 
         .head
-          +clearfix
           margin-bottom: 5.5%
 
           h1
             font-size: 6em
             font-family: 'Raleway', sans-serif
-            margin: 0 0 0 1%
-            float: left
-            width: 82%
+            margin: 0
+            //float: left
+            width: 90%
             color: $black
 
             @media screen and (max-width: 1200px)
@@ -161,13 +158,14 @@
               font-size: 2em
 
           .exit
-            position: relative
-            width: 26px
-            height: 26px
+            position: fixed
+            width: 24px
+            height: 24px
             overflow: hidden
             cursor: pointer
-            float: right
-
+            //float: right
+            top: 0px
+            right: 0px
             svg
               width: 100%
 
@@ -187,7 +185,6 @@
         p
           font-size: 1.8em
           line-height: 1.8
-          font-family: 'Inconsolata', sans-serif
           margin-bottom: 5.5%
           color: $black
           font-smoothing: antialiased
@@ -196,7 +193,7 @@
             font-size: 1.5em
 
           @media screen and (max-width: 450px)
-            font-size: 1em
+            font-size: 1.2em
 
 
       /* FOOTER */
