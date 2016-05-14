@@ -35,23 +35,22 @@ $( document ).ready(function() {
     $('html, body').scrollTop(0);
   });
 
-
-  function workLoad() {
-
-    $.ajaxSetup({
-      cache: true
-    });
-
-    $('article').click(function() {
-
-      var $this = $(this),
-        spinner = '<div class="loader"></div>',
-        newFolder = $this.data('folder'),
-        newHTML = 'GDF_Portfolio/assets/work/' + newFolder + '.html';
-      $('.work').html(spinner).load(newHTML);
-
-    });
-
-  }
-
 });
+
+function workLoad() {
+
+  $.ajaxSetup({
+    cache: true
+  });
+
+  $('article').click(function() {
+
+    var $this = $(this),
+      spinner = '<div class="loader"></div>',
+      newFolder = $this.data('folder'),
+      newHTML = 'assets/work/' + newFolder + '.html';
+    $('.work').html(spinner).load(newHTML);
+
+  });
+
+}
