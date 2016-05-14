@@ -47,7 +47,7 @@ $( document ).ready(function() {
       var $this = $(this),
         spinner = '<div class="loader"></div>',
         newFolder = $this.data('folder'),
-        newHTML = '../assets/work/' + newFolder + '.html';
+        newHTML = 'GDF_Portfolio/assets/work/' + newFolder + '.html';
       $('.work').html(spinner).load(newHTML);
 
     });
