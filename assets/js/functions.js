@@ -16,7 +16,8 @@ $( document ).ready(function() {
       $('.info-lockup').toggleClass('openholder');
     }, 250);
 
-    $('body').toggleClass('noscroll');
+    $('html, body').toggleClass('noscroll');
+    $('.logo').toggleClass('white');
   });
 
 
@@ -34,7 +35,6 @@ $( document ).ready(function() {
   $('article').on("click", function() {
     $('html, body').scrollTop(0);
   });
-
 });
 
 function workLoad() {
