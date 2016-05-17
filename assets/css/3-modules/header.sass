@@ -13,13 +13,14 @@
 
   .nav
     width: 90%
-    margin:  25px 40px
+    margin:  25px 45px
     +clearfix
 
     .logo
       width: 52px !important
       height: 24px
       width: auto
+      transition: all 0.5s ease-in-out
 
       svg
         height: 100%
@@ -32,6 +33,7 @@
         svg
           path
             fill: $white
+
 
     .info-lockup
 
@@ -48,7 +50,7 @@
         height: 40px
         cursor: pointer
         box-sizing: border-box
-        border: 3px solid $black
+        border: 2px solid $black
         text-align: center
         display: flex
         align-items: center
@@ -65,7 +67,7 @@
           text-decoration: none
 
           h2
-            font-size: 0.8em
+            font-size: 0.9em
             letter-spacing: 2px
             font-smoothing: antialiased
             text-transform: uppercase
@@ -85,12 +87,18 @@
             display: inline-block
             margin-right: 12px
             height: 100%
-            //width: 19px !important
             box-sizing: border-box
             vertical-align: middle
 
+            &:nth-child(1)
+              width: 18px !important
+
             &:nth-child(2)
               padding: 1px 0 1px 0
+              width: 26px !important
+
+            &:nth-child(3)
+              width: 23px !important
 
             a
               &:active path
@@ -214,3 +222,4 @@
           span
             margin-left: 0px
             background: $white
+            transition: all 0.5s ease-in-out
