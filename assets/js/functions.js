@@ -3,7 +3,13 @@ $( document ).ready(function() {
   workLoad();
 
   $(window).load(function() {
-		$('article').addClass('is-open');
+    $('article').each(function(i) {
+
+    	setTimeout(function() {
+    		$('article').eq(i).addClass('is-open');
+    	}, 175 * (i+1));
+
+    });
 	});
 
 
