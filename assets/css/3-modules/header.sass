@@ -17,8 +17,8 @@
     +clearfix
 
     .logo
-      width: 52px !important
-      height: 24px
+      width: 50px !important
+      height: 22px
       width: auto
       transition: all 0.5s ease-in-out
 
@@ -38,12 +38,13 @@
     .info-lockup
 
       p
-        width: 200px
+        width: 260px
         line-height: 1.8
-        margin-bottom: 120px
+        margin-bottom: 60px
         margin-top: 10px
-        font-size: 0.8em
+        font-size: 0.7em
         font-smoothing: antialiased
+        color: $black
 
       .contactbtn
         width: 140px
@@ -54,22 +55,24 @@
         display: flex
         align-items: center
         justify-content: center
-        transition: 0.2s ease-in
-        background: tint( $black, 75% )
-        border-radius: 3px
+        transition: 0.1s linear
+        border: 1px solid $black
 
         &:hover, &:focus
           background: $black
+
+        &:hover h2, &:focus h2
+          color: $white
 
         a
           text-decoration: none
 
           h2
-            font-size: 0.8em
-            letter-spacing: 2px
+            font-size: 0.7em
+            letter-spacing: 3px
             font-smoothing: antialiased
             text-transform: uppercase
-            color: $white
+            color: $black
 
       .social
         visibility: visible
@@ -79,7 +82,7 @@
           list-style: none
           padding: 0
           margin: 0
-          height: 18px
+          height: 15px
 
           li
             display: inline-block
@@ -89,14 +92,14 @@
             vertical-align: middle
 
             &:nth-child(1)
-              width: 18px !important
+              width: 15px !important
 
             &:nth-child(2)
               padding: 1px 0 1px 0
-              width: 26px !important
+              width: 20px !important
 
             &:nth-child(3)
-              width: 23px !important
+              width: 20px !important
 
             a
               &:active path
@@ -161,7 +164,7 @@
 
         .contactbtn
           margin: 0 auto
-          border: 2px solid $white
+          border: 1px solid $white
           background: none
 
           &:hover, &:focus
@@ -170,8 +173,10 @@
           &:hover h2, &:focus h2
             color: $black
 
-          h2
-            color: $white
+          a
+
+            h2
+              color: $white
 
         .social
           margin: 0 auto
